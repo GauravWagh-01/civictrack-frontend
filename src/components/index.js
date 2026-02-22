@@ -8,3 +8,5 @@ export { EmptyState } from './EmptyState.jsx';
 export { StatusBadge } from './StatusBadge.jsx';
 export { LoadingSpinner } from './LoadingSpinner.jsx';
 export { ErrorBoundary } from './ErrorBoundary.jsx';
+export { FeedbackModal } from './FeedbackModal.jsx';
+export { LoginModal } from './LoginModal.jsx';
