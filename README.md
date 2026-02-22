@@ -1,9 +1,6 @@
 
   # CivicTrack UI Design
 
-  This is a code bundle for CivicTrack UI Design. The original project is available at https://www.figma.com/design/UAvZucbwaGDnOs680pX8bV/CivicTrack-UI-Design.
-
-  ## Running the code
 
   Run `npm i` to install the dependencies.
 
