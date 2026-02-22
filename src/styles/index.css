@@ -1,0 +1,36 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+@import 'leaflet/dist/leaflet.css';
+
+/* Custom styles for map markers */
+.custom-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Ensure Leaflet map renders correctly */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.leaflet-tile-pane {
+  opacity: 1 !important;
+}
+
+.leaflet-tile {
+  filter: none !important;
+}
+
+/* Fix for map controls */
+.leaflet-control-zoom,
+.leaflet-control-attribution {
+  z-index: 997 !important;
+}
+
+/* Ensure tiles load properly */
+.leaflet-tile-container {
+  opacity: 1 !important;
+}
