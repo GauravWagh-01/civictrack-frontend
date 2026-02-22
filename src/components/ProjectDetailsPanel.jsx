@@ -20,7 +20,6 @@ import { LoginModal } from './LoginModal.jsx';
 
 /**
  * Returns a Tailwind progress-bar color class based on project status.
- * @param {import('../api/mockData.js').ProjectStatus} status
  */
 function getProgressBarColor(status) {
     switch (status) {
@@ -28,9 +27,11 @@ function getProgressBarColor(status) {
             return 'bg-emerald-500';
         case 'in-progress':
             return 'bg-amber-500';
-        case 'delayed':
-            return 'bg-red-500';
-        case 'planned':
+        case 'on-hold':
+            return 'bg-orange-500';
+        case 'cancelled':
+            return 'bg-gray-400';
+        case 'proposed':
         default:
             return 'bg-blue-500';
     }
@@ -38,7 +39,6 @@ function getProgressBarColor(status) {
 
 /**
  * Returns a status-based accent color for the top strip.
- * @param {import('../api/mockData.js').ProjectStatus} status
  */
 function getAccentGradient(status) {
     switch (status) {
@@ -46,9 +46,11 @@ function getAccentGradient(status) {
             return 'from-emerald-600 to-emerald-500';
         case 'in-progress':
             return 'from-amber-600 to-amber-500';
-        case 'delayed':
-            return 'from-red-600 to-red-500';
-        case 'planned':
+        case 'on-hold':
+            return 'from-orange-600 to-orange-500';
+        case 'cancelled':
+            return 'from-gray-500 to-gray-400';
+        case 'proposed':
         default:
             return 'from-blue-600 to-blue-500';
     }
@@ -299,6 +301,7 @@ export function ProjectDetailsPanel({ project, isOpen, onClose }) {
                         <FeedbackModal
                             open={feedbackOpen}
                             onOpenChange={setFeedbackOpen}
+                            projectId={project.id}
                             projectTitle={project.title}
                         />
 

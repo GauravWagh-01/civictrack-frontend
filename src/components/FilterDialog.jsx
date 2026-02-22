@@ -10,10 +10,11 @@ import {
 
 const filterOptions = [
     { value: 'all', label: 'All Projects' },
-    { value: 'planned', label: 'Planned' },
+    { value: 'proposed', label: 'Proposed' },
     { value: 'in-progress', label: 'In Progress' },
-    { value: 'delayed', label: 'Delayed' },
+    { value: 'on-hold', label: 'On Hold' },
     { value: 'completed', label: 'Completed' },
+    { value: 'cancelled', label: 'Cancelled' },
 ];
 
 /**
@@ -46,8 +47,8 @@ export function FilterDialog({ statusFilter, onStatusFilterChange }) {
                             key={option.value}
                             onClick={() => onStatusFilterChange(option.value)}
                             className={`w-full text-left px-4 py-3 rounded-lg border transition-all ${statusFilter === option.value
-                                    ? 'bg-blue-50 border-blue-200 shadow-sm'
-                                    : 'bg-white border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                                ? 'bg-blue-50 border-blue-200 shadow-sm'
+                                : 'bg-white border-gray-200 hover:border-gray-300 hover:bg-gray-50'
                                 }`}
                             role="radio"
                             aria-checked={statusFilter === option.value}
@@ -55,8 +56,8 @@ export function FilterDialog({ statusFilter, onStatusFilterChange }) {
                             <div className="flex items-center justify-between">
                                 <span
                                     className={`font-medium ${statusFilter === option.value
-                                            ? 'text-blue-700'
-                                            : 'text-gray-700'
+                                        ? 'text-blue-700'
+                                        : 'text-gray-700'
                                         }`}
                                 >
                                     {option.label}

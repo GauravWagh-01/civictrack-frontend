@@ -1,10 +1,11 @@
 import { STATUS_COLORS } from '../utils/constants.js';
 
 const legendItems = [
-    { status: 'Planned', color: STATUS_COLORS.planned },
+    { status: 'Proposed', color: STATUS_COLORS.proposed },
     { status: 'In Progress', color: STATUS_COLORS['in-progress'] },
-    { status: 'Delayed', color: STATUS_COLORS.delayed },
+    { status: 'On Hold', color: STATUS_COLORS['on-hold'] },
     { status: 'Completed', color: STATUS_COLORS.completed },
+    { status: 'Cancelled', color: STATUS_COLORS.cancelled },
 ];
 
 export function MapLegend() {
